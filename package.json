@@ -1,0 +1,21 @@
+{
+  "name": "green_mind",
+  "version": "0.0.1",
+  "description": "A lightweight and semantic css framework",
+  "main": "scss/green_mind.scss",
+  "responsitory": {
+    "type": "git",
+    "url": "https://github.com/aidewoode/green_mind.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "framework",
+    "front-end"
+  ],
+  "bugs": {
+    "url": "https://github.com/aidewoode/green_mind/issues"
+  },
+  "author": "aidewoode",
+  "license": "MIT"
+}
