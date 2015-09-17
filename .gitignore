@@ -1,1 +1,12 @@
 .DS_Store
+node_modules
+
+# Ignore bundler config
+docs/.bundle
+
+# Ignore the build directory
+docs/build
+
+# Ignore cache
+docs/.sass-cache
+docs/.cache

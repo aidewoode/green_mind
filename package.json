@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A lightweight and semantic css framework",
   "main": "scss/green_mind.scss",
-  "responsitory": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/aidewoode/green_mind.git"
   },
@@ -17,5 +17,12 @@
     "url": "https://github.com/aidewoode/green_mind/issues"
   },
   "author": "aidewoode",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-csslint": "^0.2.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.3.0"
+  }
 }
