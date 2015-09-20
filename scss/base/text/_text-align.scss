@@ -1,0 +1,9 @@
+@function text-align-options() {
+  @return right left center justify;
+}
+
+@each $option in text-align-options() {
+  .#{$option}-text {
+    text-decoration: $option;
+  }
+}

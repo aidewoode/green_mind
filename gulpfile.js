@@ -6,26 +6,26 @@ var scsslint = require('gulp-scss-lint');
 
 gulp.task('watch_change', function() {
   gulp.watch('scss/**/*.scss', function(event) {
-    gulp.src('scss/green_mind.scss')
+    gulp.src('scss/green-mind.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('docs/source/stylesheets'));
   });
 });
 
 gulp.task('minify_css', function() {
-  gulp.src('dist/css/green_mind.css')
+  gulp.src('dist/css/green-mind.css')
     .pipe(minifyCss())
     .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('publish_css', function() {
-  gulp.src('scss/green_mind.scss')
+  gulp.src('scss/green-mind.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('csslint', function() {
-  gulp.src('dist/css/green_mind.css')
+  gulp.src('dist/css/green-mind.css')
     .pipe(csslint())
     .pipe(csslint.reporter());
 });

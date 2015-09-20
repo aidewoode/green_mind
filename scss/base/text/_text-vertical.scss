@@ -1,0 +1,9 @@
+@function text-vertical-options() {
+  @return baseline middle top bottom;
+}
+
+@each $option in text-vertical-options() {
+  .#{$option}-text {
+    vertical-align: $option;
+  }
+}

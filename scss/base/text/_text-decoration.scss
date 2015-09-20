@@ -1,0 +1,9 @@
+@function text-decoration-options() {
+  @return underline overline line-through;
+}
+
+@each $option in text-decoration-options() {
+  .#{$option}-text {
+    text-decoration: $option;
+  }
+}
