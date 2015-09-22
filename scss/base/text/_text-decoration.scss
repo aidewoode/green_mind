@@ -1,3 +1,4 @@
+//use function to avoid define a global variable.
 @function text-decoration-options() {
   @return underline overline line-through;
 }

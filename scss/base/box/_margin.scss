@@ -1,0 +1,28 @@
+@each $category-name, $category-value in box-categories() {
+  @each $box-position-option in box-position-options() {
+    .#{$category-name}-#{$box-position-option}-margin {
+      @if $box-position-option == vertical {
+        margin-top: $category-value;
+        margin-bottom: $category-value;
+      } @else if $box-position-option == horizontal {
+        margin-right: $category-value;
+        margin-left: $category-value;
+      } @else {
+        margin-#{$box-position-option}: $category-value;
+      }
+    }
+    @if $category-name != none {
+      .negative-#{$category-name}-#{$box-position-option}-margin {
+        @if $box-position-option == vertical {
+          margin-top: -$category-value;
+          margin-bottom: -$category-value;
+        } @else if $box-position-option == horizontal {
+          margin-right: -$category-value;
+          margin-left: -$category-value;
+        } @else {
+          margin-#{$box-position-option}: -$category-value;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@each $category-name, $category-value in box-categories() {
+  @each $box-position-option in box-position-options() {
+    .#{$category-name}-#{$box-position-option}-padding {
+      @if $box-position-option == vertical {
+        padding-top: $category-value;
+        padding-bottom: $category-value;
+      } @else if $box-position-option == horizontal {
+        padding-right: $category-value;
+        padding-left: $category-value;
+      } @else {
+        padding-#{$box-position-option}: $category-value;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@each $color-name, $color-value in $colors {
+  @each $border-option in border-position-options() {
+    .#{$color-name}-#{$border-option}-border {
+      border-#{$border-option}-color: $color-value;
+    }
+  }
+
+  .#{$color-name}-border {
+    border-color: $color-value;
+  }
+}

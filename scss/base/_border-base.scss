@@ -1,0 +1,16 @@
+//use function to avoid define a global variable.
+@function border-position-options() {
+  @return top bottom left right;
+}
+
+@function border-style-options() {
+  @return none dotted dashed solid;
+}
+
+@function border-width-options() {
+  @return (normal: .125rem, narrow: .0625rem, wide: .25rem);
+}
+
+@import 'border/border-color';
+@import 'border/border-style';
+@import 'border/border-width';
