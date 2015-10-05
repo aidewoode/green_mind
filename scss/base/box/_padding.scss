@@ -12,4 +12,8 @@
       }
     }
   }
+
+  .#{$category-name}-padding {
+    padding: $category-value;
+  }
 }

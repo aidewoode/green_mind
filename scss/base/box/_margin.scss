@@ -25,4 +25,14 @@
       }
     }
   }
+
+  .#{$category-name}-margin {
+    margin: $category-value;
+  }
+
+  @if $category-name != none {
+    .negative-#{$category-name}-margin {
+      margin: -$category-value;
+    }
+  }
 }

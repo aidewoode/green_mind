@@ -1,0 +1,7 @@
+.clearfix {
+  &:after {
+    content: "";
+    @extend .display-table;
+    clear: both;
+  }
+}
