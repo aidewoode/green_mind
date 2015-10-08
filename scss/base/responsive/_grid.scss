@@ -6,38 +6,48 @@
   flex-wrap: wrap;
 }
 
-.gm-width-1-1  { width: 100%; }
+@mixin grid-width($grid-name: "") {
+  .gm-width-#{$grid-name}1-1  { width: 100%; }
 
-.gm-width-1-2,
-.gm-width-2-4,
-.gm-width-3-6,
-.gm-width-5-10 { width: 50%; }
+  .gm-width-#{$grid-name}1-2,
+  .gm-width-#{$grid-name}2-4,
+  .gm-width-#{$grid-name}3-6,
+  .gm-width-#{$grid-name}5-10 { width: 50%; }
 
-.gm-width-1-3,
-.gm-width-2-6  { width: (1/3)*100%; }
+  .gm-width-#{$grid-name}1-3,
+  .gm-width-#{$grid-name}2-6  { width: (1/3)*100%; }
 
-.gm-width-2-3,
-.gm-width-4-6  { width: (2/3)*100%; }
+  .gm-width-#{$grid-name}2-3,
+  .gm-width-#{$grid-name}4-6  { width: (2/3)*100%; }
 
-.gm-width-1-4  { width: 25%; }
-.gm-width-3-4  { width: 75%; }
+  .gm-width-#{$grid-name}1-4  { width: 25%; }
+  .gm-width-#{$grid-name}3-4  { width: 75%; }
 
-.gm-width-1-5,
-.gm-width-2-10 { width: 20%; }
+  .gm-width-#{$grid-name}1-5,
+  .gm-width-#{$grid-name}2-10 { width: 20%; }
 
-.gm-width-2-5,
-.gm-width-4-10 { width: 40%; }
+  .gm-width-#{$grid-name}2-5,
+  .gm-width-#{$grid-name}4-10 { width: 40%; }
 
-.gm-width-3-5,
-.gm-width-6-10 { width: 60%; }
+  .gm-width-#{$grid-name}3-5,
+  .gm-width-#{$grid-name}6-10 { width: 60%; }
 
-.gm-width-4-5,
-.gm-width-8-10 { width: 80%; }
+  .gm-width-#{$grid-name}4-5,
+  .gm-width-#{$grid-name}8-10 { width: 80%; }
 
-.gm-width-1-6  { width: (1/6)*100%; }
-.gm-width-5-6  { width: (5/6)*100%; }
+  .gm-width-#{$grid-name}1-6  { width: (1/6)*100%; }
+  .gm-width-#{$grid-name}5-6  { width: (5/6)*100%; }
 
-.gm-width-1-10 { width: 10%; }
-.gm-width-3-10 { width: 30%; }
-.gm-width-7-10 { width: 70%; }
-.gm-width-9-10 { width: 90%; }
+  .gm-width-#{$grid-name}1-10 { width: 10%; }
+  .gm-width-#{$grid-name}3-10 { width: 30%; }
+  .gm-width-#{$grid-name}7-10 { width: 70%; }
+  .gm-width-#{$grid-name}9-10 { width: 90%; }
+}
+
+@include grid-width;
+
+@each $name, $breakpoint in $breakpoints {
+  @media screen and (min-width: $breakpoint) {
+    @include grid-width($grid-name: #{$name}-);
+  }
+}

@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var csslint = require('gulp-csslint');
 var scsslint = require('gulp-scss-lint');
+var rename = require('gulp-rename');
 
 gulp.task('watch_change', function() {
   gulp.watch('scss/**/*.scss', function(event) {
@@ -14,6 +15,7 @@ gulp.task('watch_change', function() {
 
 gulp.task('minify_css', function() {
   gulp.src('dist/css/green-mind.css')
+    .pipe(rename("green-mind.mini.css"))
     .pipe(minifyCss())
     .pipe(gulp.dest('dist/css'));
 });
