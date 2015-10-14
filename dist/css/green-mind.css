@@ -357,6 +357,11 @@ html {
   font-size: 16px;
   font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "Wenquanyi Micro Hei", sans-serif; }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
 .right-text {
   text-decoration: right; }
 
@@ -624,7 +629,7 @@ html {
 .display-inline {
   display: inline; }
 
-.display-block {
+.display-block, .responsive-img {
   display: block; }
 
 .display-inline-block {
@@ -1023,6 +1028,12 @@ html {
 .none-margin, .gm-grid {
   margin: 0; }
 
+/**
+ * example:  .noraml-padding
+ *           .noraml-top-padding
+ *           .small-vertical-padding
+ *           .none-padding
+ */
 .ex-tiny-top-padding {
   padding-top: 0.063rem; }
 
@@ -1089,7 +1100,7 @@ html {
   padding-right: 0.625rem;
   padding-left: 0.625rem; }
 
-.small-padding {
+.small-padding, [class^="gm-width"] {
   padding: 0.625rem; }
 
 .noraml-top-padding {
@@ -1267,7 +1278,7 @@ html {
 .gm-width-9-10 {
   width: 90%; }
 
-@media screen and (min-width: 30em) {
+@media screen and (max-width: 480px) {
   .gm-width-small-1-1 {
     width: 100%; }
   .gm-width-small-1-2,
@@ -1310,7 +1321,7 @@ html {
   .gm-width-small-9-10 {
     width: 90%; } }
 
-@media screen and (min-width: 48em) {
+@media screen and (max-width: 768px) {
   .gm-width-medium-1-1 {
     width: 100%; }
   .gm-width-medium-1-2,
@@ -1353,7 +1364,7 @@ html {
   .gm-width-medium-9-10 {
     width: 90%; } }
 
-@media screen and (min-width: 60em) {
+@media screen and (max-width: 960px) {
   .gm-width-large-1-1 {
     width: 100%; }
   .gm-width-large-1-2,
@@ -1395,6 +1406,10 @@ html {
     width: 70%; }
   .gm-width-large-9-10 {
     width: 90%; } }
+
+.responsive-img {
+  max-width: 100%;
+  height: auto; }
 
 .reset-list-style, .gm-grid {
   list-style: none !important; }

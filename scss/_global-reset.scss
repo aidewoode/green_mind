@@ -3,3 +3,9 @@ html {
   font-size: $root-font-size;
   font-family: $default-font-family;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

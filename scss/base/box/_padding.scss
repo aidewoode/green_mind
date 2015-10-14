@@ -1,3 +1,10 @@
+/**
+ * example:  .noraml-padding
+ *           .noraml-top-padding
+ *           .small-vertical-padding
+ *           .none-padding
+ */
+
 @each $category-name, $category-value in box-categories() {
   @each $box-position-option in box-position-options() {
     .#{$category-name}-#{$box-position-option}-padding {

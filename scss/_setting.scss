@@ -4,6 +4,7 @@ $default-font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB","Hi
 
 $root-font-size: 16px;
 
+
 // Color Settings
 
 $colors: (
@@ -16,8 +17,17 @@ $colors: (
   grey:   #c6c2b6
 );
 
+// Responsive Break Points
+
 $breakpoints: (
-  small: 30em,
-  medium: 48em,
-  large: 60em
+  small:  480px,
+  medium: 768px,
+  large:  960px
 );
+
+
+// Global Responsive Setting
+
+// if set true, the text, margin, padding, border and so on
+// will be responsive
+$global-responsive-setting: false;

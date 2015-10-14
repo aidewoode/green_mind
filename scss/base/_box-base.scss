@@ -1,12 +1,12 @@
 @function box-categories() {
   @return (
-    ex-tiny: .063rem,
-    tiny:    .312rem,
-    small:   .625rem,
-    noraml:  1.25rem,
-    large:   3.125rem,
-    huge:    6.25rem,
-    ex-huge: 12.5rem,
+    ex-tiny: .063rem,  // 1px
+    tiny:    .312rem,  // 5px
+    small:   .625rem,  // 10px
+    noraml:  1.25rem,  // 20px
+    large:   3.125rem, // 50px
+    huge:    6.25rem,  // 100px
+    ex-huge: 12.5rem,  // 200px
     none:    0
   );
 }

@@ -47,7 +47,11 @@
 @include grid-width;
 
 @each $name, $breakpoint in $breakpoints {
-  @media screen and (min-width: $breakpoint) {
+  @media screen and (max-width: $breakpoint) {
     @include grid-width($grid-name: #{$name}-);
   }
+}
+
+[class^="gm-width"] {
+  @extend .small-padding;
 }

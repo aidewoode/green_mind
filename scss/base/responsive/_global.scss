@@ -1,0 +1,24 @@
+// You can set $global-responsive-setting to true let
+// the text, margin, padding and so on to be responsive.
+// Be careful to use it, because it will cause some
+// unexpected affect to your style.
+
+@if $global-responsive-setting {
+  @each $name, $breakpoint in $breakpoints {
+    @media screen and (max-width: $breakpoint) {
+      html {
+        @if $name == small {
+          font-size: $root-font-size * 0.6;
+        }
+
+        @if $name == medium {
+          font-size: $root-font-size * 0.8;
+        }
+
+        @if $name == large {
+          font-size: $root-font-size;
+        }
+      }
+    }
+  }
+}
