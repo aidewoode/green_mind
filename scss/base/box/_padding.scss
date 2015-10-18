@@ -1,13 +1,13 @@
 /**
- * example:  .noraml-padding
- *           .noraml-top-padding
- *           .small-vertical-padding
- *           .none-padding
+ * example:  .padding--noraml
+ *           .padding__top--noraml
+ *           .padding__vertical--small
+ *           .padding--none
  */
 
 @each $category-name, $category-value in box-categories() {
   @each $box-position-option in box-position-options() {
-    .#{$category-name}-#{$box-position-option}-padding {
+    .padding__#{$box-position-option}--#{$category-name} {
       @if $box-position-option == vertical {
         padding-top: $category-value;
         padding-bottom: $category-value;
@@ -20,7 +20,7 @@
     }
   }
 
-  .#{$category-name}-padding {
+  .padding--#{$category-name} {
     padding: $category-value;
   }
 }

@@ -1,5 +1,5 @@
-.responsive-img {
-  @extend .display-block;
+.img--responsive {
+  @extend .display--block;
   max-width: 100%;
   height: auto;
 }

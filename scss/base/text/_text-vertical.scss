@@ -4,7 +4,7 @@
 }
 
 @each $option in text-vertical-options() {
-  .#{$option}-text {
+  .text--#{$option} {
     vertical-align: $option;
   }
 }

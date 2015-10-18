@@ -4,7 +4,7 @@
 }
 
 @each $option in text-align-options() {
-  .#{$option}-text {
+  .text--#{$option} {
     text-decoration: $option;
   }
 }

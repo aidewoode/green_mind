@@ -1,11 +1,11 @@
 @each $width-name, $width-value in border-width-options() {
   @each $border-position-option in border-position-options() {
-    .#{$width-name}-#{$border-position-option}-border {
+    .border__#{$border-position-option}--#{$width-name} {
       border-#{$border-position-option}-width: $width-value;
     }
   }
 
-  .#{$width-name}-border {
+  .border--#{$width-name} {
     border-width: $width-value;
   }
 }

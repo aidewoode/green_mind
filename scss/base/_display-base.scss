@@ -3,7 +3,7 @@
 }
 
 @each $display-option in display-options() {
-  .display-#{$display-option} {
+  .display--#{$display-option} {
     display: $display-option;
   }
 }

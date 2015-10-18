@@ -1,3 +1,9 @@
+/**
+ * Base Settings
+ *
+ */
+
+
 // Font Settings
 
 $default-font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB","Hiragino Sans GB W3", "Microsoft YaHei", "Wenquanyi Micro Hei", sans-serif !default;
@@ -31,3 +37,19 @@ $breakpoints: (
 // if set true, the text, margin, padding, border and so on
 // will be responsive
 $global-responsive-setting: false;
+
+
+/*
+ * Components Settings
+ *
+ */
+
+// Icon settings
+$icon-font-path: '../../fonts';
+
+$icon-sizes: (
+  medium: 1.5rem,
+  large:  2rem,
+  huge:   2.5rem
+);
+

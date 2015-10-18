@@ -1,6 +1,6 @@
 @each $category-name, $category-value in box-categories() {
   @each $box-position-option in box-position-options() {
-    .#{$category-name}-#{$box-position-option}-margin {
+    .margin__#{$box-position-option}--#{$category-name} {
       @if $box-position-option == vertical {
         margin-top: $category-value;
         margin-bottom: $category-value;
@@ -12,7 +12,7 @@
       }
     }
     @if $category-name != none {
-      .negative-#{$category-name}-#{$box-position-option}-margin {
+      .negative-margin__#{$box-position-option}--#{$category-name} {
         @if $box-position-option == vertical {
           margin-top: -$category-value;
           margin-bottom: -$category-value;
@@ -26,12 +26,12 @@
     }
   }
 
-  .#{$category-name}-margin {
+  .margin--#{$category-name} {
     margin: $category-value;
   }
 
   @if $category-name != none {
-    .negative-#{$category-name}-margin {
+    .negative-margin--#{$category-name} {
       margin: -$category-value;
     }
   }

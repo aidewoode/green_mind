@@ -1,5 +1,5 @@
 @each $color-name, $color-value in $colors {
-  .#{$color-name} {
+  .background--#{$color-name} {
     background-color: $color-value;
   }
 }

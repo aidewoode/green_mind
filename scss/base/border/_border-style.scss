@@ -1,11 +1,11 @@
 @each $border-style-option in border-style-options() {
   @each $border-position-option in border-position-options() {
-    .#{$border-style-option}-#{$border-position-option}-border {
+    .border__#{$border-position-option}--#{$border-style-option} {
       border-#{$border-position-option}-style: $border-style-option;
     }
   }
 
-  .#{$border-style-option}-border {
+  .border--#{$border-style-option} {
     border-style: $border-style-option
   }
 }
